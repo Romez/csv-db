@@ -14,7 +14,7 @@
 ;;
 ;; Hint: vec, map, keyword, first
 (defn table-keys [tbl]
-  :ImplementMe!)
+  (map keyword (vec (first tbl))))
 
 ;; (key-value-pairs [:id :surname :year :group_id] ["1" "Ivanov" "1996"])
 ;; => (:id "1" :surname "Ivanov" :year "1996")
