@@ -28,7 +28,7 @@
 ;;
 ;; Hint: apply, hash-map, key-value-pairs
 (defn data-record [tbl-keys tbl-record]
-  (apply hash-map key-value-pairs(tbl-keys tbl-record)))
+  (apply hash-map (key-value-pairs tbl-keys tbl-record)))
 
 ;; (data-table student-tbl)
 ;; => ({:surname "Ivanov", :year "1996", :id "1"}
@@ -37,7 +37,8 @@
 ;;
 ;; Hint: let, map, next, table-keys, data-record
 (defn data-table [tbl]
-  :ImplementMe!)
+  (let [tbl-keys (table-keys tbl)]
+    (map (partial data-record tbl-keys) (next tbl))))
 
 ;; (str-field-to-int :id {:surname "Ivanov", :year "1996", :id "1"})
 ;; => {:surname "Ivanov", :year "1996", :id 1}
