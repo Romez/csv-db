@@ -70,8 +70,7 @@
 ;; => ({:surname "Ivanov", :year 1998, :id 1})
 ;;
 ;; Hint: if-not, take
-(defn limit* [data lim]
-  :ImplementMe!)
+(defn limit* [data lim] (take lim data))
 
 ;; (order-by* student :year)
 ;; => ({:surname "Sidorov", :year 1996, :id 3} {:surname "Petrov", :year 1997, :id 2} {:surname "Ivanov", :year 1998, :id 1})
