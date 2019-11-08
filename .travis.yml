@@ -1,3 +1,3 @@
 language: clojure
-before_script: cd services/app
+before_script: cd ./services/app
 script: lein test
