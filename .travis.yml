@@ -1,6 +1,5 @@
 language: clojure
 before_script: cd ./services/app
-jdk:
-- oraclejdk8
+install: lein deps
 script:
 - lein test
