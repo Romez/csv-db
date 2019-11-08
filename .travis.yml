@@ -1,5 +1,0 @@
-language: clojure
-before_script: cd ./services/app
-install: lein deps
-script:
-- lein test
